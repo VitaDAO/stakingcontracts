@@ -1,9 +1,10 @@
 import hre, { ethers } from "hardhat";
 import "@nomiclabs/hardhat-etherscan";
-import chalk from 'chalk';
 import fs from "fs";
 import { Contract } from "ethers";
 import ProgressBar from "progress";
+import { compileFunction } from "vm";
+const chalk = require('chalk');
 
 interface DeploymentObject {
   name: string;
